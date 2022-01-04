@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-nginx
+  name: my-app
 spec:
   selector:
     matchLabels:
-      run: my-nginx
-  replicas: 2
+      run: my-app
+  replicas: 1
   template:
     metadata:
       labels:
-        run: my-nginx
+        run: my-app
     spec:
       containers:
-      - name: my-nginx
-        image: nginx
+      - name: my-app
+        image: wil42/playground:v1
         ports:
-        - containerPort: 80
+        - containerPort: 8888
         
         
 ---
@@ -25,12 +25,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-nginx
+  name: my-app
   labels:
-    run: my-nginx
+    run: my-app
 spec:
   ports:
-  - port: 80
+  - port: 8888
     protocol: TCP
   selector:
     run: my-nginx
