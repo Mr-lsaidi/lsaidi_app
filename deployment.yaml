@@ -20,9 +20,6 @@ spec:
         image: wil42/playground:v1
         ports:
         - containerPort: 8888
-        env:
-          - name: PORT
-            value: '8888'
 
 ---
 
@@ -36,6 +33,5 @@ spec:
   ports:
   - port: 8888
     protocol: TCP
-    targetPort: 8888
   selector:
     run: app
