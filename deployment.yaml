@@ -70,6 +70,5 @@ spec:
   ports:
   - port: 8888
     protocol: TCP
-    targetPort: 8888
   selector:
     run: app
