@@ -4,19 +4,19 @@ metadata:
   name: lsaidi-app
   namespace: dev
   labels:
-    app: app
+    app: lsaidi-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: app
+      app: lsaidi-app
   template:
     metadata:
       labels:
-        app: app
+        app: lsaidi-app
     spec:
       containers:
-      - name: wilapp
+      - name: lsaidi-app
         image: wil42/playground:v1
         ports:
         - containerPort: 8888
@@ -35,4 +35,4 @@ spec:
     protocol: TCP
     targetPort: 8888
   selector:
-    run: wilapp
+    run: lsaidi-app
