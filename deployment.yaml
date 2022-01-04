@@ -1,22 +1,22 @@
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: lsaidi-app
+  name: nginx-deployment
   labels:
-    app: app
+    app: nginx
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
-      app: app
+      app: nginx
   template:
     metadata:
       labels:
-        app: app
+        app: nginx
     spec:
       containers:
-        - name: will-app
-          image: wil42/playground:v1
+      - name: wil42/playground
+        image: wil42/playground:v1
         ports:
         - containerPort: 8888
+
