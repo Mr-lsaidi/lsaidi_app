@@ -33,4 +33,4 @@ spec:
   - port: 8888
     protocol: TCP
   selector:
-    run: my-nginx
+    run: my-app
