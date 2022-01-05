@@ -13,7 +13,7 @@ spec:
         run: app
     spec:
       containers:
-      - name: willapp
+      - name: app
         image: wil42/playground:v1
         ports:
         - containerPort: 8888
@@ -31,4 +31,4 @@ spec:
   - port: 8888
     protocol: TCP
   selector:
-    run: willapp
+    run: app
