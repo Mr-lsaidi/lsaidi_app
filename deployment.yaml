@@ -17,9 +17,6 @@ spec:
         image: wil42/playground:v2
         ports:
         - containerPort: 8888
-        env:
-          - name: "port"
-            value: "8888"
 
 ---
 
@@ -32,8 +29,6 @@ metadata:
 spec:
   ports:
   - port: 8888
-    targetPort: 8888
     protocol: TCP
-  type: NodePort
   selector:
     run: app
