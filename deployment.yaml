@@ -17,6 +17,9 @@ spec:
         image: wil42/playground:v2
         ports:
         - containerPort: 8888
+        env:
+          - name: "port"
+            value: "8888"
 
 ---
 
